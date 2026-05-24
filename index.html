@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verificador y Calculador de IP</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <h1>UNIDAD EDUCATIVA "HISPANO AMÉRICA"</h1>
+
+    <section class="grid-superior">
+      <div class="panel">
+        <h2>SELECCIONA RANGO DE LA IP</h2>
+        <div class="opciones">
+          <label><input type="radio" name="clase" value="A"> CLASE A</label>
+          <label><input type="radio" name="clase" value="B"> CLASE B</label>
+          <label><input type="radio" name="clase" value="C"> CLASE C</label>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>RANGO DE SUB REDES</h2>
+        <div class="fila">
+          <label>Inicial</label>
+          <input id="rangoInicial" type="text" disabled>
+        </div>
+        <div class="fila">
+          <label>Final</label>
+          <input id="rangoFinal" type="text" disabled>
+        </div>
+      </div>
+
+      <div class="panel ip-panel">
+        <h2>INGRESAR DIRECCIÓN IP</h2>
+        <div class="ip-inputs">
+          <input class="octeto" id="o1" type="text" maxlength="3" disabled>
+          <span>.</span>
+          <input class="octeto" id="o2" type="text" maxlength="3" disabled>
+          <span>.</span>
+          <input class="octeto" id="o3" type="text" maxlength="3" disabled>
+          <span>.</span>
+          <input class="octeto" id="o4" type="text" maxlength="3" disabled>
+          <button id="validar" disabled>Validar IP</button>
+        </div>
+
+        <div class="generar">
+          <label>Cuántas IP desea generar:</label>
+          <input id="cantidad" type="text" maxlength="4" disabled>
+        </div>
+
+        <div class="botones">
+          <button id="generar" disabled>Generar</button>
+          <button id="borrar" disabled>Borrar</button>
+        </div>
+      </div>
+
+      <div class="cuadro-logo">
+         <img src="images (5).png" alt="Logo Unidad Educativa Hispano América">
+      </div>
+    </section>
+
+    <section class="panel tabla-panel">
+      <h2>CALCULAR SUB REDES</h2>
+      <div class="tabla">
+        <div><h3>N. Red</h3><textarea id="listaRed" readonly></textarea></div>
+        <div><h3>Dirección</h3><textarea id="listaDireccion" readonly></textarea></div>
+        <div><h3>Primera red</h3><textarea id="listaPrimera" readonly></textarea></div>
+        <div><h3>Última red</h3><textarea id="listaUltima" readonly></textarea></div>
+        <div><h3>Broadcast</h3><textarea id="listaBroadcast" readonly></textarea></div>
+        <div><h3>Máscara de red</h3><textarea id="listaMascara" readonly></textarea></div>
+        <div><h3>Salto de Red</h3><textarea id="listaSalto" readonly></textarea></div>
+        <div><h3>Puerta de enlace</h3><textarea id="listaPuerta" readonly></textarea></div>
+      </div>
+      <button id="salir">Salir</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

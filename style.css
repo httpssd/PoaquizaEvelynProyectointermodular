@@ -1,0 +1,648 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #02027a;
+  color: white;
+}
+
+.app {
+  width: 95%;
+  max-width: 1180px;
+  margin: auto;
+  padding: 18px 0;
+}
+
+h1 {
+  text-align: center;
+  font-size: 32px;
+  font-style: italic;
+  text-decoration: underline;
+  margin: 5px 0 22px;
+}
+
+.panel {
+  background: #f2f2f2;
+  color: black;
+  border: 2px solid white;
+  padding: 18px;
+  position: relative;
+}
+
+.panel h2 {
+  position: absolute;
+  top: -18px;
+  left: 10px;
+  background: #f2f2f2;
+  padding: 0 6px;
+  font-size: 16px;
+  font-style: italic;
+  margin: 0;
+}
+
+.grid-superior {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr 150px;
+  gap: 22px;
+  align-items: start;
+}
+
+.grid-superior .panel:nth-child(1),
+.grid-superior .panel:nth-child(2) {
+  grid-column: 1;
+}
+
+.ip-panel {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  min-height: 240px;
+}
+
+.cuadro-logo {
+  grid-column: 3;
+  grid-row: 1 / span 2;
+  width: 150px;
+  height: 130px;
+  border: 2px solid white;
+  margin-top: 16px;
+}
+
+.opciones {
+  display: flex;
+  gap: 14px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+
+.opciones label {
+  background: blue;
+  color: white;
+  padding: 3px 8px;
+  font-weight: bold;
+}
+
+.fila {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin: 14px 0;
+}
+
+.fila label {
+  width: 70px;
+  color: white;
+  font-weight: bold;
+}
+
+input, textarea {
+  border: 1px solid #777;
+  padding: 5px;
+  font-size: 14px;
+}
+
+input:disabled, button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.ip-inputs {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin: 30px 0;
+  justify-content: center;
+}
+
+.octeto {
+  width: 42px;
+  text-align: center;
+}
+
+button {
+  padding: 12px 18px;
+  border: 2px outset #ddd;
+  background: #eee;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover:not(:disabled) {
+  background: #ddd;
+}
+
+.generar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  font-weight: bold;
+}
+
+.generar input {
+  width: 55px;
+}
+
+.botones {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.tabla-panel {
+  margin-top: 24px;
+  padding-top: 34px;
+}
+
+.tabla {
+  display: grid;
+  grid-template-columns: 55px 1fr 1.1fr 1.1fr 1.1fr 1.2fr 80px 1.2fr;
+  gap: 14px;
+}
+
+.tabla h3 {
+  color: white;
+  font-size: 13px;
+  text-align: center;
+  margin: 0 0 8px;
+}
+
+textarea {
+  width: 100%;
+  height: 145px;
+  resize: none;
+  background: white;
+  color: black;
+}
+
+#salir {
+  display: block;
+  margin: 16px auto 0;
+}
+
+@media (max-width: 950px) {
+  .grid-superior {
+    grid-template-columns: 1fr;
+  }
+
+  .ip-panel,
+  .cuadro-logo,
+  .grid-superior .panel:nth-child(1),
+  .grid-superior .panel:nth-child(2) {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .cuadro-logo {
+    display: none;
+  }
+
+  .tabla {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+body{
+margin:0;
+min-height:100vh;
+
+background:
+linear-gradient(
+rgba(0,0,70,.78),
+rgba(0,0,100,.88)
+),
+
+url("banner_computadora.jpg");
+
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+
+font-family:Arial, Helvetica, sans-serif;
+color:white;
+}
+
+/* TITULO */
+
+h1{
+
+font-size:36px;
+
+text-align:center;
+
+font-style:italic;
+
+text-decoration:underline;
+
+margin-bottom:28px;
+
+color:white;
+
+text-shadow:
+3px 3px 10px black;
+
+letter-spacing:2px;
+
+}
+
+
+/* PANELES */
+
+.panel{
+
+background:
+rgba(245,245,245,.96);
+
+border:2px solid white;
+
+box-shadow:
+0 0 25px rgba(0,0,0,.45);
+
+border-radius:6px;
+
+color:black;
+
+}
+
+
+/* TITULOS DE PANEL */
+
+.panel h2{
+
+background:white;
+
+color:#000;
+
+padding:2px 10px;
+
+border-radius:4px;
+
+font-size:17px;
+
+font-weight:bold;
+
+}
+
+
+/* CLASES IP */
+
+.opciones{
+
+display:flex;
+
+gap:16px;
+
+flex-wrap:wrap;
+
+margin-top:30px;
+
+}
+
+.opciones label{
+
+background:
+linear-gradient(
+135deg,
+#0057ff,
+#00008b
+);
+
+padding:8px 14px;
+
+color:white;
+
+font-weight:bold;
+
+border-radius:5px;
+
+box-shadow:
+0 4px 10px rgba(0,0,0,.35);
+
+cursor:pointer;
+
+transition:.25s;
+
+}
+
+.opciones label:hover{
+
+transform:translateY(-2px);
+
+}
+
+.opciones input{
+
+margin-right:8px;
+
+}
+
+
+/* RANGO */
+
+.fila label{
+
+color:#111;
+
+font-weight:bold;
+
+}
+
+
+/* INPUTS */
+
+input,
+textarea{
+
+background:white;
+
+border:1px solid #777;
+
+border-radius:3px;
+
+padding:7px;
+
+}
+
+
+/* OCTETOS */
+
+.octeto{
+
+width:50px;
+
+height:34px;
+
+font-size:18px;
+
+font-weight:bold;
+
+text-align:center;
+
+}
+
+
+/* BOTONES */
+
+button{
+
+background:
+linear-gradient(
+white,
+#dddddd
+);
+
+border:2px outset white;
+
+padding:11px 18px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+transition:.25s;
+
+}
+
+button:hover:not(:disabled){
+
+transform:scale(1.04);
+
+background:#d8d8d8;
+
+}
+
+button:disabled{
+
+opacity:.45;
+
+cursor:not-allowed;
+
+}
+
+
+/* GENERAR */
+
+.generar{
+
+color:#111;
+
+font-weight:bold;
+
+}
+
+
+/* TABLA */
+
+.tabla{
+
+gap:12px;
+
+}
+
+.tabla h3{
+
+color:white;
+
+font-size:14px;
+
+font-weight:bold;
+
+text-shadow:
+1px 1px 4px black;
+
+}
+
+textarea{
+
+height:160px;
+
+box-shadow:
+inset 0 0 10px rgba(0,0,0,.15);
+
+}
+
+
+/* LOGO */
+
+.cuadro-logo{
+
+background:
+
+rgba(255,255,255,.96);
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+border-radius:5px;
+
+box-shadow:
+0 0 20px rgba(0,0,0,.4);
+
+}
+
+.cuadro-logo img{
+
+width:120px;
+
+height:120px;
+
+object-fit:contain;
+
+}
+
+
+/* BOTON SALIR */
+
+#salir{
+
+margin-top:20px;
+
+padding:12px 26px;
+
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:950px){
+
+h1{
+
+font-size:26px;
+
+}
+
+.panel{
+
+padding:14px;
+
+}
+
+}
+/* DISEÑO MINIMALISTA BONITO */
+
+body {
+  background:
+    linear-gradient(rgba(2, 6, 23, 0.82), rgba(15, 23, 42, 0.9)),
+    url("banner_computadora.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.app {
+  max-width: 1200px;
+}
+
+h1 {
+  font-size: 34px;
+  color: white;
+  text-shadow: 0 4px 18px rgba(0,0,0,.6);
+  letter-spacing: 1px;
+}
+
+.panel {
+  background: rgba(255,255,255,.92);
+  border: 1px solid rgba(255,255,255,.75);
+  border-radius: 16px;
+  box-shadow: 0 20px 45px rgba(0,0,0,.28);
+  backdrop-filter: blur(8px);
+}
+
+.panel h2 {
+  background: #ffffff;
+  color: #0f172a;
+  border-radius: 10px;
+  padding: 5px 12px;
+  font-size: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,.12);
+}
+
+.opciones label {
+  background: #2563eb;
+  color: white;
+  border-radius: 12px;
+  padding: 9px 13px;
+  font-weight: bold;
+  box-shadow: 0 8px 18px rgba(37,99,235,.35);
+  transition: .25s;
+}
+
+.opciones label:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+.fila label,
+.generar,
+.tabla h3 {
+  color: #0f172a;
+  text-shadow: none;
+}
+
+input,
+textarea {
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  background: white;
+  color: #0f172a;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37,99,235,.18);
+}
+
+button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 11px 18px;
+  box-shadow: 0 8px 18px rgba(37,99,235,.28);
+}
+
+button:hover:not(:disabled) {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+button:disabled {
+  background: #94a3b8;
+  color: #e2e8f0;
+  opacity: .65;
+}
+
+textarea {
+  height: 160px;
+  padding: 10px;
+}
+
+.cuadro-logo {
+  background: rgba(255,255,255,.92);
+  border: 1px solid rgba(255,255,255,.8);
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(0,0,0,.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cuadro-logo img {
+  width: 115px;
+  height: 115px;
+  object-fit: contain;
+}
+
+#salir {
+  background: #0f172a;
+}
